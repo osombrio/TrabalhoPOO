@@ -2,45 +2,55 @@ package trabalho_1_PCII;
 
 public class Produto 
 {
-	
+	private static int contadorProdutos=0;
 	private int codigoID;
-	private String nomeProduto;
-	private int quantDisp;
-	private int precoVenda;
+	private String nome;
+	private int quantidadeDisponivel;
+	private float precoVenda;
 	private String descricao;
-	//Construtor
-	public Produto(int codigo, String nome, int quantidade,int valorVenda,String info)
-	{
-		 codigoID = codigo;
-		 nomeProduto  = nome;
-		 quantDisp = quantidade;
-		 precoVenda = valorVenda;
-		 descricao = info;
+	
+	public Produto(String nome, int quantidadeDisponivel, float precoVenda, String descricao) {
+		this.codigoID=contadorProdutos;
+		contadorProdutos++;
+		this.nome = nome;
+		this.quantidadeDisponivel = quantidadeDisponivel;
+		this.precoVenda = precoVenda;
+		this.descricao = descricao;
 	}
-	//Metodos de alteracao
-	public void alterarPreco(int valorVenda)
-	{
-		precoVenda =valorVenda;
+
+	public String getNome() {
+		return nome;
 	}
-	//Metodos de leitura
-	public int getCodigoID()
-	{
-		return codigoID;
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public String getnomeProduto()
-	{
-		return nomeProduto;
+
+	public int getQuantidadeDisponivel() {
+		return quantidadeDisponivel;
 	}
-	public int getQuantDispo()
-	{
-		return quantDisp;
+
+	public void setQuantidadeDisponivel(int quantidadeDisponivel) {
+		this.quantidadeDisponivel = quantidadeDisponivel;
 	}
-	public int valorVenda()
-	{
+
+	public float getPrecoVenda() {
 		return precoVenda;
 	}
-	public String getDescricao()
-	{
+
+	public void setPrecoVenda(float precoVenda) {
+		this.precoVenda = precoVenda;
+	}
+
+	public String getDescricao() {
 		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getCodigoID() {
+		return codigoID;
 	}
 }
