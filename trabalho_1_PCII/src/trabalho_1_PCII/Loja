@@ -86,6 +86,17 @@ public class Loja {
 		}
 		return -1;
 	}
+	public Produto getProduto(int i){
+		if(i>0&&i<quantidadeDeProdutos){
+			return produtos[i];
+		}
+		return null;
+	}
+	public void setProduto(int i,Produto produto){
+		if(i>0&&i<quantidadeDeProdutos&&produto!=null){
+			produtos[i]=produto;
+		}
+	}
 	Loja(){
 		quantidadeDeProdutos=0;
 	}
